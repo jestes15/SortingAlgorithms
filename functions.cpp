@@ -1,6 +1,6 @@
 #include "functions.hpp"
 
-uint functions::setId(int x)
+unsigned int functions::setId(int x)
 {
     id = x;
     if (id == x)
@@ -11,7 +11,7 @@ int functions::getId()
 {
     return id;
 }
-uint functions::setUid(int x)
+unsigned int functions::setUid(int x)
 {
     uid = x;
     if (uid == x)

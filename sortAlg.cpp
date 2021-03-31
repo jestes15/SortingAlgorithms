@@ -13,20 +13,24 @@ template <typename T> void insertSort(std::vector<T>* vector)
     }
 }
 
-template <typename T> void printVector(std::vector<T> vector)
+template <typename T> void printVector(std::vector<T> vector, std::ofstream & out)
 {
     for (int i = 0; i < vector.size(); i++)
     {
+        if (i % 30 == 0)
+        {
+            out << "\n";
+        }
         if (i == 0) 
         {
-            std::cout << "[ " << vector[i] << ", ";
+            out << "[ " << vector[i] << ", ";
         }
         else if (i != (vector.size() - 1)) {
-            std::cout << vector[i] << ", ";
+            out << vector[i] << ", ";
         }
         else
         {
-            std::cout << vector[i] << " ]" << std::endl;
+            out << vector[i] << " ]" << std::endl;
         }
     }
 }
